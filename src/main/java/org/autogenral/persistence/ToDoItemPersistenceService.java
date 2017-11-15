@@ -3,6 +3,7 @@ package org.autogenral.persistence;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.autogenral.todo.ToDoItem;
 import org.autogenral.todo.ToDoItemAddRequest;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Scope("singleton")
+@Transactional
 public class ToDoItemPersistenceService
 {
 	Logger log = LoggerFactory.getLogger(getClass());
