@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.autogenral.brackets.validator.BracketsValidatorControllerTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.866 sec - in org.autogenral.brackets.validator.BracketsValidatorControllerTests
