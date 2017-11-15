@@ -37,6 +37,13 @@ public class ToDoItemValidationError extends TestResult
 		return error;
 	}
 
+	public static ToDoItemValidationError create(DataInputException e)
+	{
+		ToDoItemValidationError error = new ToDoItemValidationError();
+		error.addError(e);
+		return error;
+	}
+
 	public ErrorDetails getDetails()
 	{
 		return details;

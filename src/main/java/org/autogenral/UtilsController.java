@@ -1,6 +1,6 @@
 package org.autogenral;
 
-import org.autogenral.todo.ToDoItemPersistenceService;
+import org.autogenral.persistence.ToDoItemPersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

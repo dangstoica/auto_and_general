@@ -1,16 +1,32 @@
 package org.autogenral.todo;
 
-import javax.xml.datatype.DatatypeConfigurationException;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author dan.stoica
  *
  */
+@Entity
+@Table(name = "users")
 public class ToDoItem
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private Long id;
+
+	@Column(name = "text")
 	private String text;
+
+	@Column(name = "isCompleted")
 	private Boolean isCompleted = Boolean.FALSE;
+
+	@Column(name = "createdAt")
 	private String createdAt;
 
 	public ToDoItem()
@@ -18,16 +34,16 @@ public class ToDoItem
 		this.createdAt = FormattedTimestampFactory.createFormattedTimestamp();
 	}
 
-	public static void main(String[] args) throws DatatypeConfigurationException
+	public ToDoItem(String text)
 	{
-
+		this();
+		this.text = text;
 	}
 
 	public ToDoItem(Long id, String text)
 	{
-		this();
+		this(text);
 		this.id = id;
-		this.text = text;
 	}
 
 	public Long getId()

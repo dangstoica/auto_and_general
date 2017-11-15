@@ -1,8 +1,10 @@
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/todo/test/IntegrationTestResult.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/validators/BracketsBalanceValidator.java
+/Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/persistence/ToDoItemPersistenceService.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/ApplicationConfigProperties.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/StatusResponse.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/validators/InputBracketsSizeValidator.java
+/Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/UtilsController.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/results/TestResult.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/DataInputException.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/validators/UnbalancedBracketsException.java
@@ -22,9 +24,9 @@
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/AutoGeneralTestApplication.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/validators/NullValidator.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/todo/ToDoItemUpdateRequest.java
-/Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/todo/ToDoItemPersistenceService.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/todo/FormattedTimestampFactory.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/todo/ToDoItemNotFoundDetail.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/validator/validators/InvalidLenghtException.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/BracketsValidatorController.java
 /Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/brackets/results/Detail.java
+/Users/dan.stoica/dev/spring-boot/gs-rest-service/complete/src/main/java/org/autogenral/Messages.java

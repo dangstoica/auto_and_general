@@ -1,17 +1,21 @@
 package org.autogenral;
 
+import static org.autogenral.Messages.LENGTH_1_TO_50_MSG;
+import static org.autogenral.Messages.NOT_A_VALID_ITEM_ID_MSG;
+
 import javax.validation.Valid;
 
 import org.autogenral.brackets.results.Detail;
 import org.autogenral.brackets.results.TestResult;
 import org.autogenral.brackets.results.ToDoItemValidationError;
-import org.autogenral.brackets.validator.BracketsValidatorService;
 import org.autogenral.persistence.ItemNotFoundException;
+import org.autogenral.persistence.ToDoItemPersistenceService;
 import org.autogenral.todo.ToDoItem;
 import org.autogenral.todo.ToDoItemAddRequest;
 import org.autogenral.todo.ToDoItemNotFoundError;
-import org.autogenral.todo.ToDoItemPersistenceService;
 import org.autogenral.todo.ToDoItemUpdateRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,15 +34,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ToDoItemController
 {
 
+	private Logger log = LoggerFactory.getLogger(getClass());
+
 	private static final String ID_PARAM = "id";
 
 	private static final String TEXT_PARAM = "text";
-
-	private static final String NOT_A_VALID_ITEM_ID_MSG = "Not a Valid item ID";
-
-	private static final String LENGTH_1_TO_50_MSG = "Must be between 1 and 50 chars long.";
-
-	BracketsValidatorService validator = new BracketsValidatorService();
 
 	@Autowired
 	ToDoItemPersistenceService persistenceService;
@@ -54,6 +54,9 @@ public class ToDoItemController
 
 		ToDoItemValidationError error = new ToDoItemValidationError();
 		error.getDetails().add(new Detail(TEXT_PARAM, itemRequest.getText(), LENGTH_1_TO_50_MSG));
+
+		log.error("Invalid requets to create item with text {}.", itemRequest.getText());
+
 		return new ResponseEntity<TestResult>(error, HttpStatus.BAD_REQUEST);
 	}
 
@@ -71,10 +74,13 @@ public class ToDoItemController
 
 			ToDoItemValidationError error = new ToDoItemValidationError("ValidationError");
 			error.getDetails().add(new Detail("" + itemId, NOT_A_VALID_ITEM_ID_MSG));
+
+			log.error("Not a valid id {}.", itemId);
 			return new ResponseEntity<ToDoItemValidationError>(error, HttpStatus.BAD_REQUEST);
 		}
 		catch (ItemNotFoundException e)
 		{
+			log.error("Item not found for id {}.", itemId);
 			return new ResponseEntity<ToDoItemNotFoundError>(ToDoItemNotFoundError.create(itemId), HttpStatus.NOT_FOUND);
 		}
 	}
@@ -101,6 +107,7 @@ public class ToDoItemController
 		}
 		catch (ItemNotFoundException e)
 		{
+			log.error("Update Item error. Item not found for id {}.", itemId);
 			return new ResponseEntity<ToDoItemNotFoundError>(ToDoItemNotFoundError.create(itemId), HttpStatus.NOT_FOUND);
 		}
 	}

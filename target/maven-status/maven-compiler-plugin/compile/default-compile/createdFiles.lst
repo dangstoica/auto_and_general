@@ -8,15 +8,16 @@ org/autogenral/brackets/results/ToDoItemValidationError.class
 org/autogenral/todo/ToDoItemAddRequest.class
 org/autogenral/ToDoItemController.class
 org/autogenral/brackets/validator/validators/BracketsBalanceValidator.class
+org/autogenral/Messages.class
 org/autogenral/todo/ToDoItemUpdateRequest.class
 org/autogenral/brackets/validator/BalanceTestResult.class
 org/autogenral/todo/ToDoItem.class
+org/autogenral/persistence/ToDoItemPersistenceService.class
 org/autogenral/brackets/validator/validators/InputBracketsSizeValidator.class
 org/autogenral/brackets/validator/validators/UnbalancedBracketsException.class
 org/autogenral/todo/ToDoItemNotFoundError.class
 org/autogenral/BracketsValidatorController.class
 org/autogenral/persistence/ItemNotFoundException.class
-org/autogenral/todo/ToDoItemPersistenceService.class
 org/autogenral/brackets/results/ErrorDetails.class
 org/autogenral/todo/FormattedTimestampFactory.class
 org/autogenral/brackets/results/Detail.class
@@ -24,6 +25,7 @@ org/autogenral/brackets/validator/validators/InvalidUpdateRequestExpection.class
 org/autogenral/brackets/validator/validators/InvalidLenghtException.class
 org/autogenral/todo/test/BracersTestResult.class
 org/autogenral/brackets/validator/BracketsValidatorService.class
+org/autogenral/UtilsController.class
 org/autogenral/StatusResponse.class
 org/autogenral/brackets/validator/ApplicationConfigProperties.class
 org/autogenral/brackets/validator/DataInputException.class
